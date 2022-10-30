@@ -1,13 +1,11 @@
 <?php
 
-function places(){
-$places = simplexml_load_file("places.xml");
-foreach($places as $place)
-{
-echo "name: " . $place->name; echo "<br>";
-echo "id: " . $place->cre_id; echo "<br>";
-echo "Location: " . $place->location; echo "<br>"; echo "<br>";
-}
+function json(){
+$prices_json = @file_get_contents('prices.json');
+ 
+$myarray = json_decode($prices_json, true);
+var_dump($myarray);
+
 }
 
-places();
+json();
