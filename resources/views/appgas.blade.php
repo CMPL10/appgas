@@ -1,6 +1,7 @@
 <?php
 /*
-$places = simplexml_load_file("places.xml");
+function readXML(){
+$places = simplexml_load_file("prices.xml");
 $total_places = count($places->place);
 
 echo "<table>\n";
@@ -11,15 +12,19 @@ echo "<tr><td>".$places->place[$x]->regular."</td><td>".$places->place[$x]->prem
 }
 
 echo "</table>\n";
+}
 */
 
+function readXML(){
 if (file_exists('places.xml')) {
     $xml = simplexml_load_file('places.xml');
  
     print_r($xml);
 } else {
-    exit('Failed to open places.xml');
+    exit('Failed to open prices.xml');
+}
 }
 
-?>
+readXML();
 
+?>
