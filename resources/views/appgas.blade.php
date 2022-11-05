@@ -13,7 +13,7 @@ echo "<tr><td>".$places->place[$x]->regular."</td><td>".$places->place[$x]->prem
 
 echo "</table>\n";
 }
-*/
+
 
 function readXML(){
 if (file_exists('places.xml')) {
@@ -26,5 +26,11 @@ if (file_exists('places.xml')) {
 }
 
 readXML();
+*/
+
+
+
+
+
 
 ?>
