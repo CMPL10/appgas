@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Cotrollers\shazamController;
+use App\Http\Controllers\shazam;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 //Route::get("/porfiles","App\\Http\\Controllers\\shazamController@index");
 
-Route::get("/user/{id}", [shazamController::class,"index"]);
+Route::get("/user/{id}", [shazam::class,"index"]);
 
 Route::get('/', function (){
     return view('appgas');
